@@ -28,7 +28,8 @@ winchScrewType = "M8";
 winchThreadExtraDepth = 1;
     
 wireRadius = 0.75;
-wireTolerance = 0.4;
+//0.4 To small
+wireTolerance = 0.5;
 
 pulleyInnerRadius = 2.05;
 pulleyOuterRadius = 5;
@@ -52,7 +53,8 @@ grooveDepth = wireRadius*2+wireTolerance+winchThreadExtraDepth;
 grooveOffset = (2*sin(45)-1)*wireRadius+wireTolerance;
 pitch = 2*grooveDepth;
 
-winchHolderDistance = 0.3;
+// 0.3 too small
+winchHolderDistance = 0.7;
 
 
 //TODO Stabilität
@@ -423,9 +425,9 @@ evaluateWinch();
 $fa = $preview ? 12 : 3 ;
 $fs = $preview ? 0.5 : 0.1 ;
 
-//winchbase();
+winchbase();
 
 //winch();
 //color("Red")
 //bearingHolder();
-assembly();
+//assembly();
